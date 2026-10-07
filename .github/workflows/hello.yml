@@ -1,0 +1,23 @@
+name: Hello Actions
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet
+        run: echo "Hello from Github Actions"
+      - name: Explore the runner
+        run: |
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "triggered by: ${{ github.actor }} via ${{ github.event_name }}"
+          uname -a
+          node -v
+          docker --version
+          ls -la
+      - name: checkout my code
+        uses: actions/checkout@v4
+      - name: list files again
+        run: ls -la
