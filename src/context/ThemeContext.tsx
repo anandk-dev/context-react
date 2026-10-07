@@ -1,4 +1,4 @@
-import React, { Children, useState, type ReactNode } from "react";
+import React, { useState, type ReactNode } from "react";
 
 interface ThemeContextTypes {
     theme: string,
