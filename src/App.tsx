@@ -5,7 +5,7 @@ import { ThemeContext } from './context/ThemeContext.ts'
 function App() {
   const context = useContext(ThemeContext);
   if (!context) return null;
-  const x: number = "Hello";
+  const x: number = "Hello this is wrong value";
   console.log(x)
 
   const {theme, toggleTheme} = context
