@@ -5,7 +5,7 @@ import { ThemeContext } from './context/ThemeContext.ts'
 function App() {
   const context = useContext(ThemeContext);
   if (!context) return null;
-  let x: number = 5;
+  const x: number = 5;
   console.log(x)
 
   const {theme, toggleTheme} = context
